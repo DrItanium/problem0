@@ -1,11 +1,1 @@
-(progn(bind ?r(readline))
-(while(neq ?r EOF)do
-(bind ?z(string-to-field ?r))
-(format t"%s cents:%n"?r)
-(progn$(?a(create$ 25 10 5 1))
-(bind ?l(div ?z ?a))
-(if(> ?l 0)then(format t"%d x %d cents%n"?l ?a))
-(bind ?z(mod ?z ?a)))
-(printout t crlf)
-(bind ?r(readline)))
-(exit))
+(progn(while(neq(bind ?z(read))EOF)do(format t"%d cents:%n"?z)(progn$(?a(create$ 25 10 5 1))(bind ?l(div ?z ?a))(if(> ?l 0)then(format t"%d x %d cents%n"?l ?a))(bind ?z(mod ?z ?a)))(format t"%n"))(exit))
