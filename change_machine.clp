@@ -1,7 +1,7 @@
 (defrule s =>(assert(r(readline))))
 (defrule c ?f<-(r ?c&~EOF)=>(assert(r(readline))(z(string-to-field ?c)25 10 5 1))(format t"%s cents:%n"?c))
 (defrule z ?f<-(z ?v ?c $?r)=>(retract ?f)(bind ?d(div ?v ?c))(assert(z(mod ?v ?c)?r))(if(> ?d 0)then(format t"%d x %d cents%n"?d ?c)))
-(defrule q ?f<-(z ?)=>(retract ?f) (printout t crlf))
+(defrule q ?f<-(z ?)=>(retract ?f)(printout t crlf))
 (reset)
 (run)
 (exit)
