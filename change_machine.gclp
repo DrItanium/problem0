@@ -1,0 +1,1 @@
+(p(while(neq(b ?z(read))EOF)do(f t"%d cents:%n"?z)(p$(?a(c$ 25 10 5 1))(and(>(b ?l(d ?z ?a))0)(f t"%d x %d cents%n"?l ?a))(b ?z(m ?z ?a)))(f t"%n"))(exit))
