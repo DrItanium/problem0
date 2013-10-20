@@ -1,1 +1,1 @@
-(progn(while(neq(bind ?z(read))EOF)do(format t"%d cents:%n"?z)(progn$(?a(create$ 25 10 5 1))(bind ?l(div ?z ?a))(if(> ?l 0)then(format t"%d x %d cents%n"?l ?a))(bind ?z(mod ?z ?a)))(format t"%n"))(exit))
+(progn(while(neq(bind ?z(read))EOF)do(format t"%d cents:%n"?z)(progn$(?a(create$ 25 10 5 1))(if(>(bind ?l(div ?z ?a))0)then(format t"%d x %d cents%n"?l ?a))(bind ?z(mod ?z ?a)))(format t"%n"))(exit))
